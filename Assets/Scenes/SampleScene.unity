@@ -264,17 +264,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7569062617187897661, guid: 55657d7662f7f8845a57a201ac155345, type: 3}
   m_PrefabInstance: {fileID: 170219733922540796}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &671922899 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5235412139580324239, guid: 55657d7662f7f8845a57a201ac155345, type: 3}
-  m_PrefabInstance: {fileID: 170219733922540796}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61192a84b52fc984197460ce7acf9c40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &912975195 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4980053674663499634, guid: 30e2a4fd5d0558b49bcdbedeb2c4fa65, type: 3}
@@ -353,17 +342,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1954109365 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2096336826359572455, guid: 9fda06fa4b2e5b346a301cfd1920f81e, type: 3}
-  m_PrefabInstance: {fileID: 2815248493971557928}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d5d5b63543c77349add736ad05de01f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1954109368 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7219980150664456140, guid: 9fda06fa4b2e5b346a301cfd1920f81e, type: 3}
@@ -374,17 +352,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4547032208820946725, guid: 7ebb3b2a4ee7b1c4d8db9930e895fdf1, type: 3}
   m_PrefabInstance: {fileID: 2790557240317900046}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2108801599 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8149219499591577912, guid: 7ebb3b2a4ee7b1c4d8db9930e895fdf1, type: 3}
-  m_PrefabInstance: {fileID: 2790557240317900046}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b8aecb6cbe0d664c8c14ba6f892c7b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2121629984
 GameObject:
   m_ObjectHideFlags: 0
@@ -397,7 +364,6 @@ GameObject:
   - component: {fileID: 2121629987}
   - component: {fileID: 2121629986}
   - component: {fileID: 2121629985}
-  - component: {fileID: 2121629989}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -463,7 +429,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -492,22 +458,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2121629989
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121629984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a67975d28ca99d74aa803a99897693a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: {fileID: 78502428}
-  _healthBarText: {fileID: 1954109365}
-  _healthBarSlider: {fileID: 2108801599}
-  _healthBarSliderSmooth: {fileID: 671922899}
 --- !u!1001 &170219733922540796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -527,6 +477,18 @@ PrefabInstance:
     - target: {fileID: 5235412139580324239, guid: 55657d7662f7f8845a57a201ac155345, type: 3}
       propertyPath: _smoothnessCoefficient
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336411297947643781, guid: 55657d7662f7f8845a57a201ac155345, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336411297947643781, guid: 55657d7662f7f8845a57a201ac155345, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5336411297947643781, guid: 55657d7662f7f8845a57a201ac155345, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6054477090354583795, guid: 55657d7662f7f8845a57a201ac155345, type: 3}
       propertyPath: m_AnchorMax.x
@@ -738,6 +700,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2121629988}
     m_Modifications:
+    - target: {fileID: 1228452841634945273, guid: 7ebb3b2a4ee7b1c4d8db9930e895fdf1, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228452841634945273, guid: 7ebb3b2a4ee7b1c4d8db9930e895fdf1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228452841634945273, guid: 7ebb3b2a4ee7b1c4d8db9930e895fdf1, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3624065377797384713, guid: 7ebb3b2a4ee7b1c4d8db9930e895fdf1, type: 3}
       propertyPath: m_Name
       value: HealthBarSlider
