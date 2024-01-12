@@ -14,7 +14,18 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         CurrentHealth -= damage;
+
+        if (CurrentHealth < 0)
+         CurrentHealth = 0; 
     }
 
-    public void Recover() => CurrentHealth = MaxHealth;
+    public void TakeHeal(int healingPoints)
+    {
+        CurrentHealth += healingPoints;
+
+        if (CurrentHealth > MaxHealth)
+            CurrentHealth = MaxHealth;
+    }
+
+    public void Recover() => TakeHeal(MaxHealth);
 }
