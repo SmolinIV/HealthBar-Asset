@@ -10,7 +10,8 @@ public class Health : MonoBehaviour
 
     private void Awake()
     {
-        Max = Current = 100;
+        Max = 100;
+        Current = Max;
     }
 
     public void TakeDamage(float damage)

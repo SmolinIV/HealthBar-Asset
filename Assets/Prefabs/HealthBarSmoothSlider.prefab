@@ -374,7 +374,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetHealth: {fileID: 0}
-  SmoothnessCoefficient: 150
+  SmoothnessCoefficient: 1
 --- !u!1 &5530317166098634972
 GameObject:
   m_ObjectHideFlags: 0
