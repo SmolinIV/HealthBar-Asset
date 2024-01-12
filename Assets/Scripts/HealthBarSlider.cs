@@ -3,27 +3,21 @@ using UnityEngine.UI;
 
 public class HealthBarSlider : HealthBar
 {
-    protected Slider _slider;
+    protected Slider Slider;
 
     protected void Start()
     {
         base.Start();
-        _slider = GetComponent<Slider>();
+        Slider = GetComponent<Slider>();
 
-        _slider.maxValue = _maxHealth;
-        _slider.value = _lastShowingHealth = _currentHealth;
+        Slider.minValue = 0;
+        Slider.maxValue = 1;
+
+        Slider.value = TargetHealth.Current/TargetHealth.Max;
     }
 
-    protected override void UpdateHealthBar()
+    protected override void UpdateCondition()
     {
-        if (_lastShowingHealth != _currentHealth)
-            SetSliderPosition();
+        Slider.value = TargetHealth.Current/TargetHealth.Max;
     }
-
-    protected virtual void SetSliderPosition()
-    {
-        _slider.value = _currentHealth;
-        _lastShowingHealth = _slider.value;
-    }
-
 }

@@ -5,17 +5,10 @@ using UnityEngine;
 
 public class HealthBarText : HealthBar
 {
-    [SerializeField] protected TMP_Text _numericalIndicator;
+    [SerializeField] private TMP_Text _numericalIndicator;
 
-    protected override void UpdateHealthBar()
+    protected override void UpdateCondition()
     {
-        if (_lastShowingHealth != _currentHealth)
-            UpdateNumericalIndicator();
-    }
-
-    private void UpdateNumericalIndicator()
-    {
-        _numericalIndicator.text = _currentHealth.ToString() + "/" + _maxHealth.ToString();
-        _lastShowingHealth = _currentHealth;
+        _numericalIndicator.text = ((int)TargetHealth.Current).ToString() + "/" + ((int)TargetHealth.Max).ToString();
     }
 }

@@ -5,33 +5,33 @@ public class Health : MonoBehaviour
 {
     public Action HealthChaged;
 
-    public int MaxHealth { get; private set; }
-    public int CurrentHealth { get; private set; }
+    public float Max { get; private set; }
+    public float Current { get; private set; }
 
     private void Awake()
     {
-        MaxHealth = CurrentHealth = 100;
+        Max = Current = 100;
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
-        CurrentHealth -= damage;
+        Current -= damage;
 
-        if (CurrentHealth < 0)
-         CurrentHealth = 0;
+        if (Current < 0)
+         Current = 0;
 
         HealthChaged?.Invoke();
     }
 
-    public void TakeHeal(int healingPoints)
+    public void TakeHeal(float healingPoints)
     {
-        CurrentHealth += healingPoints;
+        Current += healingPoints;
 
-        if (CurrentHealth > MaxHealth)
-            CurrentHealth = MaxHealth;
+        if (Current > Max)
+            Current = Max;
 
         HealthChaged?.Invoke();
     }
 
-    public void Recover() => TakeHeal(MaxHealth);
+    public void Recover() => TakeHeal(Max);
 }

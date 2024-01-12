@@ -6,26 +6,17 @@ using UnityEngine.UI;
 
 public abstract class HealthBar : MonoBehaviour
 {
-    [SerializeField] protected Health _targetHealth;
-
-    protected float _lastShowingHealth;
+    [SerializeField] protected Health TargetHealth;
 
     public void OnDisable()
     {
-        _targetHealth.HealthChaged -= UpdateHealthBar;
+        TargetHealth.HealthChaged -= UpdateCondition;
     }
 
     protected void Start()
     {
-        _lastShowingHealth = _targetHealth.CurrentHealth;
-
-        _targetHealth.HealthChaged += UpdateHealthBar;
+        TargetHealth.HealthChaged += UpdateCondition;
     }
 
-    public void ChangeCurrentHealth(int currentHealth)
-    {
-        _currentHealth = currentHealth;
-    }
-
-    protected abstract void UpdateHealthBar();
+    protected abstract void UpdateCondition();
 }
